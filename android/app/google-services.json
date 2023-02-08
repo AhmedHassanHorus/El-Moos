@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "457151601245",
+    "project_id": "el-moos-b9340",
+    "storage_bucket": "el-moos-b9340.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:457151601245:android:3c7dc132b08e9f02320bb4",
+        "android_client_info": {
+          "package_name": "com.AHorus.ElMoos.el_moos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "457151601245-vhdsp9ov3qrnpk9ksdscgr759n0ao6os.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbgnTpqjBiy5r4bo5Qig6EBHxtlQm9TDU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "457151601245-vhdsp9ov3qrnpk9ksdscgr759n0ao6os.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
