@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>457151601245-8g0jgv7ae320d6uabqc5f1bdclmsa7vg.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.457151601245-8g0jgv7ae320d6uabqc5f1bdclmsa7vg</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCdFEXpFvALzS3ohT9kOhz1NtLm5IZwyrk</string>
+	<key>GCM_SENDER_ID</key>
+	<string>457151601245</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.AHorus.ElMoos.elMoos</string>
+	<key>PROJECT_ID</key>
+	<string>el-moos-b9340</string>
+	<key>STORAGE_BUCKET</key>
+	<string>el-moos-b9340.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:457151601245:ios:03dc0cd7028ee968320bb4</string>
+</dict>
+</plist>
