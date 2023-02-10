@@ -39,7 +39,7 @@ class NewsCard extends StatelessWidget {
                         fit: BoxFit.fill,
                       )),
                   Flexible(
-                      flex: 2,
+                      flex: 3,
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Column(
@@ -71,6 +71,57 @@ class NewsCard extends StatelessWidget {
                             Text(
                               body,
                               style: Theme.of(context).textTheme.bodyMedium,
+                            ),
+                            const Spacer(),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Container(
+                                    width: 32,
+                                    height: 32,
+                                    decoration: BoxDecoration(
+                                        color: Colors.grey[200],
+                                        borderRadius:
+                                            BorderRadius.circular(20)),
+                                    child: ClipRRect(
+                                      borderRadius: BorderRadius.circular(20),
+                                      child: TextButton(
+                                        onPressed: () {},
+                                        child: const Icon(
+                                          Icons.thumb_down,
+                                          color: Colors.black54,
+                                          size: 12,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Container(
+                                    width: 32,
+                                    height: 32,
+                                    decoration: BoxDecoration(
+                                        color: Colors.grey[200],
+                                        borderRadius:
+                                            BorderRadius.circular(20)),
+                                    child: ClipRRect(
+                                      borderRadius: BorderRadius.circular(20),
+                                      child: TextButton(
+                                        onPressed: () {},
+                                        child: const Icon(
+                                          Icons.thumb_up,
+                                          color: Colors.black54,
+                                          size: 12,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
                             )
                           ],
                         ),
