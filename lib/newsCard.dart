@@ -16,31 +16,31 @@ class NewsCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Center(
-          child: SizedBox(
-            height: 400,
-            width: 350,
-            child: Card(
-              color: Colors.white,
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10)),
-              elevation: 7,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Flexible(
-                      fit: FlexFit.tight,
-                      flex: 2,
-                      child: Image.network(
-                        coverPhoto,
-                        fit: BoxFit.fill,
-                      )),
-                  Flexible(
-                      flex: 3,
-                      child: Padding(
+    return Center(
+      child: SizedBox(
+        height: 400,
+        width: 350,
+        child: Card(
+          margin: EdgeInsets.zero,
+          color: Colors.white,
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+          elevation: 7,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Flexible(
+                  fit: FlexFit.tight,
+                  flex: 2,
+                  child: Image.network(
+                    coverPhoto,
+                    fit: BoxFit.fill,
+                  )),
+              Flexible(
+                  flex: 3,
+                  child: Column(
+                    children: [
+                      Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Column(
                           children: [
@@ -56,7 +56,7 @@ class NewsCard extends StatelessWidget {
                                 ),
                                 Text(
                                   websiteName,
-                                  style: TextStyle(fontSize: 10),
+                                  style: const TextStyle(fontSize: 10),
                                 )
                               ],
                             ),
@@ -72,63 +72,79 @@ class NewsCard extends StatelessWidget {
                               body,
                               style: Theme.of(context).textTheme.bodyMedium,
                             ),
-                            const Spacer(),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.end,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Container(
-                                    width: 32,
-                                    height: 32,
-                                    decoration: BoxDecoration(
-                                        color: Colors.grey[200],
-                                        borderRadius:
-                                            BorderRadius.circular(20)),
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(20),
-                                      child: TextButton(
-                                        onPressed: () {},
-                                        child: const Icon(
-                                          Icons.thumb_down,
-                                          color: Colors.black54,
-                                          size: 12,
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Container(
-                                    width: 32,
-                                    height: 32,
-                                    decoration: BoxDecoration(
-                                        color: Colors.grey[200],
-                                        borderRadius:
-                                            BorderRadius.circular(20)),
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(20),
-                                      child: TextButton(
-                                        onPressed: () {},
-                                        child: const Icon(
-                                          Icons.thumb_up,
-                                          color: Colors.black54,
-                                          size: 12,
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            )
                           ],
                         ),
-                      ))
-                ],
-              ),
-            ),
+                      ),
+                      const Spacer(),
+                      const Divider(
+                        height: 1,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Flexible(
+                            flex: 2,
+                            child: TextButton(
+                              style: TextButton.styleFrom(
+                                  padding: const EdgeInsets.all(0)),
+                              onPressed: () {},
+                              child: Container(
+                                height: 48,
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: const [
+                                    Text(
+                                      'Dislike',
+                                      style: TextStyle(color: Colors.black),
+                                    ),
+                                    SizedBox(
+                                      width: 5,
+                                    ),
+                                    Icon(
+                                      Icons.thumb_down,
+                                      color: Colors.black54,
+                                      size: 12,
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
+                          const Divider(),
+                          Flexible(
+                            flex: 2,
+                            child: TextButton(
+                              style: TextButton.styleFrom(
+                                  padding: const EdgeInsets.all(0)),
+                              onPressed: () {},
+                              child: Container(
+                                height: 48,
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: const [
+                                    Text(
+                                      'Like',
+                                      style: TextStyle(color: Colors.black),
+                                    ),
+                                    SizedBox(
+                                      width: 5,
+                                    ),
+                                    Icon(
+                                      Icons.thumb_up,
+                                      color: Colors.black54,
+                                      size: 12,
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      )
+                    ],
+                  ))
+            ],
           ),
         ),
       ),
