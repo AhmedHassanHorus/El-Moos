@@ -52,5 +52,8 @@
   "we sent a password reset email": "ارسلنا لك رساله لتجديد كلمة السر",
   "edit_plants": "عدل النباتات",
   "sorry you do not have access to do that": "للاسف انت لا تمتلك الامكانية لفعل هذا",
-  "This plant has no data try the potato and switch the language to arabic": "هذه النبتة لا تمتلك اي بيانات جرب نبتة البطاطس"
+  "This plant has no data try the potato and switch the language to arabic": "هذه النبتة لا تمتلك اي بيانات جرب نبتة البطاطس",
+  "news": "اخبار",
+  "questions": "اسئلة",
+  "get_your_rewards": "احصل على مكافئاتك"
 }
