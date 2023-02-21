@@ -60,9 +60,14 @@ class _AuthPageState extends State<AuthPage> {
           'userName': userName,
           'userEmail': email,
           'userPoints': 0,
+          'like_list': [],
+          'dislike_list': [],
 
         });
         await _auth.currentUser!.sendEmailVerification();
+
+        await _auth.signOut();
+
         _signedUp = true;
         _lastEmail = email;
         ScaffoldMessenger.of(context).clearSnackBars();

@@ -210,6 +210,8 @@ style: ButtonStyle(shape:  MaterialStateProperty.all<RoundedRectangleBorder>(
                               'userName': user.displayName,
                               'userEmail': user.email,
                               'userPoints': 0,
+                              'like_list': [],
+                              'dislike_list': [],
                             });
                           }
                         } catch (e) {
@@ -259,87 +261,7 @@ style: ButtonStyle(shape:  MaterialStateProperty.all<RoundedRectangleBorder>(
                       ),
                     ),
                   ),
-                if (!widget.isLoading && !loading && !_passwordGet)
-                  Padding(
-                    padding: const EdgeInsets.only(bottom: 16.0),
-                    child: ElevatedButton(
-                      style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all(Colors.blue),
-                        shape: MaterialStateProperty.all(
-                          RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(40),
-                          ),
-                        ),
-                      ),
-                      onPressed: () async {
-                        setState(() {
-                          loading = true;
-                        });
-                        try {
-                          User? user =
-                              await Authentication.signInFacebook(context);
-                          final response = await FirebaseFirestore.instance
-                              .collection('users')
-                              .doc(user!.uid)
-                              .get();
-                          if (!response.exists) {
-                            print('ok');
-                            await FirebaseFirestore.instance
-                                .collection('users')
-                                .doc(user.uid)
-                                .set({
-                              'userName': user.displayName,
-                              'userEmail': user.email,
-                              'userPoints': 0,
-                            });
-                          }
-                        } catch (e) {
-                          print('ok  $e');
-                          setState(() {
-                            loading = false;
-                          });
-                        }
-                        setState(() {
-                          loading = false;
-                        });
-                      },
-                      child: Padding(
-                        padding: EdgeInsets.fromLTRB(
-                            0,
-                            MediaQuery.of(context).size.width / 40,
-                            0,
-                            MediaQuery.of(context).size.width / 40),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.min,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: <Widget>[
-                            Icon(
-                              Icons.facebook,
-                              size: MediaQuery.of(context).size.width / 15,
-                            ),
-                            Padding(
-                              padding: EdgeInsets.only(
-                                  left: context.locale == Locale('ar')
-                                      ? 0
-                                      : MediaQuery.of(context).size.width / 40,
-                                  right: context.locale == Locale('ar')
-                                      ? MediaQuery.of(context).size.width / 40
-                                      : 0),
-                              child: Text(
-                                'sign in with facebook'.tr(),
-                                style: TextStyle(
-                                  fontSize:
-                                      MediaQuery.of(context).size.width / 20,
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.w600,
-                                ),
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
+
                 if (!widget.isLoading && !loading)
                   Row(mainAxisAlignment: MainAxisAlignment.center, children: [
                     TextButton(
